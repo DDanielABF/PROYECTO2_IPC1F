@@ -1,0 +1,32 @@
+body {
+    background-color: #ffdd90;
+    background-image: url("login.jpg");
+  }
+  div.w-33 {
+    width: 33.33%;
+    background-color: orange;
+  }
+  
+  div.center {
+    text-align: center;
+  }
+
+  .boton_personalizado{
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #1883ba;
+    border-radius: 6px;
+    border: 2px solid #0016b0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  .boton_personalizado:hover{
+    color: #1883ba;
+    background-color: #ffffff;
+  }
+

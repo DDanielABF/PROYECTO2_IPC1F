@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>PAGINA PRINCIPAL</title>
+    <!--ICONOS-->
+    <script  src="https://kit.fontawesome.com/2600c6ce36.js" crossorigin="anonymous"> </script>
+    <!--SLAIDER-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <!--PAGINA DE ESTILOS-->
+    <link rel="stylesheet" href="css/style.css">
+    <img src="img/pics/Logo.jpg" style="float:left; width: 100px;">
+    <h1>HOSPITAL USAC</h1>
+  </head>
+  <body>
+    <div id="wrapper">
+      <!--BANNER-->
+      <div id="banner-wrapper">
+        <header>
+          <div class="Header-inner">
+            <a href="Index.html" id= "logo" ></a>
+
+            <nav>
+              <a href="#MenuIcon"></a>
+              <!--<i class="fa fa-bars"></i>-->
+              <ul>
+                <li>
+                  <a href="Index.html" class = "current">Inicio</a>
+                </li>
+                <li>
+                  <a href="#Acerca">Acerca</a>
+                </li>
+                <li>
+                  <a href="#Covid">Covid</a>
+                </li>
+                <li>
+                  <a href="#Contact">Contactenos</a>
+                </li>
+                <li>
+                  <a href="Login.html">Inicio Sesion</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </header>
+        <section class="Slide-wrap">
+          <ul class = "slider1">
+            <li> <img src="img/slider/slider3.jpg" alt="slider1"></li>
+            <li> <img src="img/slider/slider2.jpg" alt="slider2"></li>
+            <li> <img src="img/slider/slider1.png" alt="slider3"></li>
+          </ul>
+        </section>
+      </div>
+    </div>
+
+    <section class = "one-third" id = "Acerca">
+      <div class="icon-wrap">
+      <img src="img/pics/valores_001.png" style="width: 200px;">
+      <h3>Nuestros Valores </h3>
+      <p>Servicio de excelencia, Cuidado con Calor Humano,  Alto apego a la ética profesional</p>
+    </section>
+    <section class = "one-third" id = "Acerca">
+      <div class="icon-wrap">
+      <img src="img/pics/mision_001.png" style="width: 200px;">
+      </div>
+      <h3>Nuestra Misión</h3>
+      <p>Somos una Institución de salud que provee servicios integrales, innovadores y de excelencia,
+        con énfasis en la seguridad de los pacientes y contribuyendo al
+        desarrollo de la ciencia médica en Guatemala..</p>
+    </section>
+    <section class = "one-third" id = "Acerca">
+      <div class="icon-wrap">
+      <img src="img/pics/vision_001.png" style="width: 200px;">
+      </div>
+      <h3>Nuestra Visión</h3>
+      <p>Ser la mejor institución de salud en Guatemala, que proporciona servicios médico-hospitalarios de excelencia,
+         con calor humano y ética profesional.</p>
+        </section>
+        <div class="clearfix-padding">  </div>
+
+        <!--COVID-19-->
+        <div class="one-third-padding" id = "Covid">
+          <h3>COVID-19</h3>
+          <img src="img/pics/covid-19.jpg" alt="">
+          <p>Los coronavirus son conocidos por provocar un amplio rango de enfermedades, desde un resfriado
+            hasta infecciones respiratorias. El nuevo coronavirus en una cepa no identificada en humanos previamente.<br/>
+            ¿De dónde proviene?<br/>
+            Los primeros casos fueron reportados en la ciudad de Wuhan (China), y actualmente se conocen casos en
+            Tailandia, Japón, corea del sur, y Estados Unidos, entre otros.<br/>
+
+            Síntomas:<br/>
+            Fiebre y escalofríos, Tos y estornudos. <br/>
+            Dolor de garganta. Malestar general intenso.<br/>
+            Respiración rápida. Sensación de falta de aire. <br/>
+            Si durante tu viaje o al retornar al país presentas síntomas similares, debes acudir de inmediato a un establecimiento de salud.<br/>
+             No te automediques.
+          </p>
+        </div>
+
+      <footer>
+        <div class="banner-wrapar">
+          <div class="Icon-text">
+            <div class="Icon-text-Icon">
+              <ul class = "footer-nav>
+                <li> <a href="Index.html" class = "current">Inicio</a> </li>
+                <li><a href="#Acerca">Acerca</a> </li>
+                <li><a href="#Covid">Covid</a> </li>
+                  <li><a href="#Contactenos">Contactenos</a> </li>
+                  <li><a onclick="login()">Inicio Sesion</a> </li>
+              </ul>
+            </div>
+            <div class="Icon-text-text">
+              <ul class = "Social">
+                <li><a href="mailto: 2986542020101@ingenieria.usac.edu.gt ">
+                    <i class="fa fa-envelope"></i>
+                  </a>
+                </li>
+                <li><a href="http://facebook.com " target="_blank">
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                </li>
+                <li><a href="http://twitter.com " target="_blank">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                </li>
+                <li><a href="http://youtube.com " target="_blank">
+                    <i class="fa fa-youtube"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <footer class = "second-footer">
+        <p>
+          &copy; Daniel Alexander Barrera Figueroa
+          Carnet 202004783
+          </p>
+
+        </footer>
+      <!--SCRIPTS-->
+      <script>
+        function login(){
+
+window.location.href="Login.html"
+
+        }
+        $(document).ready(function(){
+      $('.slider1').bxSlider(
+      {
+      mode: 'fade'
+      });
+      $('.slider2').bxSlider(
+      {
+      mode: 'fade'
+      });
+      $('.slider3').bxSlider(
+      {
+      mode: 'fade'
+      });
+    });
+      </script>
+
+  </body>
+</html>

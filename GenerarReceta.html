@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+    <title>recetas</title>
+</head>
+<!-- Nuestro onLoad puede servir como un metodo que se ejecuta cada vez que se inicie la pagina -->
+<div id="Daniel">
+<body  background="facts.jpg" bgcolor="FFCECB" >
+  
+    <center>
+        <h1 style="color:#286962 "><b> GENERAR RECETAS</b></h1>
+    </center>
+    <div >
+        <div style="width: 30%; padding-left: 100px; align-content: center; ">
+            <center>
+                <form class="text-center" style="align-content: center;">
+
+                    <div class="mb-3">
+                     <FONT COLOR="white"> <label for="nombre" class="form-label">FECHA</label></FONT>
+                    <input type="date" class="form-control" id="fecha" >
+                    </div>
+                    <div class="mb-3">
+                        <FONT COLOR="white">
+                            <center> <label for="apellido" class="form-label">PACIENTE</label></center>
+                        </FONT>
+                        <input type="text" class="form-control" id="paciente" >
+                    </div>
+                   
+                    
+                    <div class="mb-3">
+                        <FONT COLOR="white"> <label for="edad" class="form-label">PADECIMIENTO</label></FONT>
+                        <input type="text" class="form-control" id="padecimiento" >
+                    </div>
+                    <div class="mb-3">
+                        <FONT COLOR="white"><label for="edad" class="form-label">DESCRIPCION</label></FONT>
+                        <input type="text" class="form-control" id="descripcion" >
+                    </div>
+
+                    
+                    <button onclick="Regresar()" type="button" class="btn btn-outline-dark">Regresar</button>
+                    <button onclick="test(),Modificar()" type="button" class="btn btn-outline-warning">generar factura</button>
+                    
+                    <br clear="right">
+                    <br clear="all">
+                    <center>
+                        <div style="width: 100px; padding-right:  50px;float:right;">
+
+
+
+
+                        </div>
+                    </center>
+                </form>
+            </center>
+        </div>
+    </div>
+</div>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
+        <script src="html2pdf.bundle.js"></script>
+
+    <script>
+        // METODO MODIFICAR
+        function Modificar() {
+            // Recopilamos la informacion de los objetos de HTML
+            var padecimiento = document.querySelector('#padecimiento').value
+            var paciente = document.querySelector('#paciente').value
+            var fecha = document.querySelector('#fecha').value
+            var descripcion = document.querySelector('#descripcion').value
+           
+            var objeto = {
+                'consulta': consulta,
+                'paciente': paciente,
+                'fecha': fecha,
+                'descripcion': descripcion
+                
+
+            }
+            console.log("creacion del objeto en put:")
+            console.log(objeto)
+
+            // La estructura del fetch no cambia, solo la URL donde consume la API y el method.
+            fetch(`http://localhost:3000/recetas`, {
+                method: 'PUT',
+                body: JSON.stringify(objeto),
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Access-Control-Allow-Origin': '*',
+                }
+            })
+                .then(res => res.json())
+                .catch(err => {
+                    console.error('Error:', err)
+                    alert("Ocurrio un error, ver la consola")
+                })
+                .then(response => {
+                    console.log(response);
+                    alert(response.Mensaje)
+                })
+        }
+        function test() {
+                // Get the element.
+                var element = document.getElementById('Daniel');
+
+                // Generate the PDF.
+                html2pdf().from(element).set({
+                    margin: 0.5,
+                    filename: 'receta.pdf',
+                    html2canvas: { scale: 10 },
+                    jsPDF: { orientation: 'landscape', unit: 'in', format: 'letter', compressPDF: true }
+                }).save();
+            }
+
+        // METODO ELIMINAR
+        
+        function Regresar() {
+            location.href = "PrincipalDoctores.html"
+        }
+    
+       
+    </script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    -->
+</body>
+
+
+</html>

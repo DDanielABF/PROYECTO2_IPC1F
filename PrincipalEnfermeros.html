@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+    <title>PACIENTES</title>
+
+  </head>
+  <button onclick="cerrar()" type="button" class="btn btn-outline-primary">Cerrar sesion</button>
+  <body background="pacientes2.jpg">
+    <FONT FACE="fantasy" SIZE=6 COLOR="blue"><center><h1>BIENVENIDO</h1></center></FONT>
+
+    <br>
+    <br>
+    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Modificar Perfil</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button onclick=" citas()" class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Citas pendientes</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button  onclick=" citasA()"class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Citas aceptadas</button>
+        </li>
+        <li onclick=" facts()"class="nav-item" role="presentation">
+            <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Generar Factura</button>
+          </li>
+      </ul>
+      <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+
+
+            <center><input type="text" id="nombre" class="form-control mb-4" placeholder="nombre"
+                style="width:400px;height:30px"></center>
+        
+            <center><input type="text" id="apellido" class="form-control mb-4" placeholder="apellido"
+                style="width:400px;height:30px"></center>
+            <center> <input type="date" id="nacimiento" class="form-control mb-4" placeholder="Nacimiento"
+                style="width:400px;height:30px"></center>
+            <center><input type="text" id="sexo" class="form-control mb-4" placeholder="sexo" style="width:400px;height:30px">
+            </center>
+            <center> <input type="text" id="usuario" class="form-control mb-4" placeholder="usuario"
+                style="width:400px;height:30px"></center>
+            <center><input type="password" id="contra" class="form-control mb-4" placeholder="contraseña"
+                style="width:400px;height:30px"></center>
+            <center> <input type="text" id="telefono" class="form-control mb-4" placeholder="telefono"
+                style="width:400px;height:30px"></center>
+        
+                <center>
+                    <button onclick="registrar()" type="button" class="btn btn-primary btn-lg">registrar</button>
+                    <button onclick="cambiar()" type="button" class="btn btn-secondary btn-lg">cancelar</button>
+                  </center>
+              
+        
+        </div>
+        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">EFISIMA
+          
+                
+        </div>
+        <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+            <table class="table table-bordered border-primary">
+                <thead class="thead-dark">
+                    <tr class="table-info">
+                        <th> fecha</th>
+                        <th> hora </th>
+
+                        <th> motivo </th>
+                        
+
+
+                        <th>
+                            <center>Estado</center>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="detallesP"></tbody>
+            </table>
+            </div>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+      <script>
+      
+      function citas(){
+      
+          window.location.href="enfermeras.html"
+      }
+      function citasA(){
+      
+      window.location.href="enfermerasaceptadas.html"
+  }
+      function cerrar(){
+      
+        window.location.href="Index.html"
+      
+      
+      }
+      
+      function facts(){
+ 
+        window.location.href="GenerarFactura.html"
+
+
+      }
+      </script>
+          <!-- Option 2: Separate Popper and Bootstrap JS -->
+          <!--
+          <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+          -->
+        </body>
+      </html>
