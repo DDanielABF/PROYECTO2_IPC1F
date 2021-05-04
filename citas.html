@@ -75,7 +75,7 @@
 
 
 
-                      fetch('http://localhost:3000/Citas', {
+                      fetch('https://proyecto2-ipc1-202004783.herokuapp.com/Citas', {
                         method: 'POST',
                         body: JSON.stringify(objCita),
                         headers: {
@@ -84,13 +84,6 @@
                         }
                       })
 
-                        /* SIMULANDO UN TRY - CATCH
-                            El metodo fetch trabaja como una Promesa en JavaScript, representa el estado final del metodo
-                            como si de un return se tratase.
-                            .then: Para indicar que es lo que hara la respuesta del metodo, el primer then sirve para transformar la respuesta 
-                            a un JSON entendible para JavaScript.
-                            .catch: Para indicar que es lo que se hara si se obtuvo un fracaso.
-                        */
                         .then(res => res.json())
                         .catch(err => {
                           console.error('Error:', err)
@@ -108,7 +101,7 @@
 
                           //  llamar un metodo definido
                           //ObtenerDatos()
-                        })//fetch
+                        })
                     }//ultimo else
                   
 

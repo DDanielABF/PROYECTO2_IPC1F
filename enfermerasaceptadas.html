@@ -62,7 +62,7 @@
                 console.log(button)
                 var nombre = button.value
 
-                fetch(`http://localhost:3000/citas/${nombre}`, {
+                fetch(`https://proyecto2-ipc1-202004783.herokuapp.com/citas/${nombre}`, {
                     method: 'DELETE',
                     headers: {
                         'Content-Type': 'application/json',
@@ -93,7 +93,7 @@
             // Esta cadena nos servira para escribir los datos en la tabla.
             var cadena = ''
 
-            fetch('http://localhost:3000/citasAceptadas', {
+            fetch('https://proyecto2-ipc1-202004783.herokuapp.com/citasAceptadas', {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',

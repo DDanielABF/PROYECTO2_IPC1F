@@ -115,8 +115,8 @@
             console.log("creacion del objeto en put:")
             console.log(objeto)
 
-            // La estructura del fetch no cambia, solo la URL donde consume la API y el method.
-            fetch(`http://localhost:3000/facturas`, {
+           
+            fetch(`https://proyecto2-ipc1-202004783.herokuapp.com/facturas`, {
                 method: 'PUT',
                 body: JSON.stringify(objeto),
                 headers: {
@@ -159,7 +159,7 @@
                 // Esta cadena nos servira para escribir los datos en la tabla.
                 var cadena = ''
 
-                fetch('http://localhost:3000/doctores', {
+                fetch('https://proyecto2-ipc1-202004783.herokuapp.com/doctores', {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',

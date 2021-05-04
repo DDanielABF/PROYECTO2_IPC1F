@@ -232,7 +232,7 @@
                         console.log("imprimiendo el objeto ya guardado")
                         console.log(objDoctor)
                         if (objDoctor.nombre != null) {
-                            fetch('http://localhost:3000/mostrarDoctores', {
+                            fetch('https://proyecto2-ipc1-202004783.herokuapp.com/mostrarDoctores', {
                                 method: 'POST',
                                 body: JSON.stringify(objDoctor),
                                 headers: {
@@ -241,22 +241,14 @@
                                 }
                             })
 
-                                /* SIMULANDO UN TRY - CATCH
-                                    El metodo fetch trabaja como una Promesa en JavaScript, representa el estado final del metodo
-                                    como si de un return se tratase.
-                                    .then: Para indicar que es lo que hara la respuesta del metodo, el primer then sirve para transformar la respuesta 
-                                    a un JSON entendible para JavaScript.
-                                    .catch: Para indicar que es lo que se hara si se obtuvo un fracaso.
-                                */
+                             
                                 .then(res => res.json())
 
                                 .catch(err => {
                                     console.error('Error:', err)
                                     alert("Ocurrio un error, ver la consola")
                                 })
-                                /* ULTIMA TRANSFORMACION
-                                    Si el metodo funciono correctamente y se logro transformar la respuesta en un JSON, hara lo que este dentro de las llaves.
-                                */
+                               
                                 .then(response => {
                                     // En este apargado, se haran las acciones si la respuesta fue correcta.
                                     console.log(response);
@@ -267,7 +259,7 @@
 
                                     //  llamar un metodo definido
                                     //ObtenerDatos()
-                                })//fetch
+                                })
                         }
 
 
@@ -283,10 +275,10 @@
             function mostrartabla() {
                 var tabla = document.querySelector('#detalles')
 
-                // Esta cadena nos servira para escribir los datos en la tabla.
+             
                 var cadena = ''
 
-                fetch('http://localhost:3000/doctores', {
+                fetch('https://proyecto2-ipc1-202004783.herokuapp.com/doctores', {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',
@@ -337,7 +329,7 @@
                 console.log(button)
                 var nombre = button.value
 
-                fetch(`http://localhost:3000/doctores/${nombre}`, {
+                fetch(`https://proyecto2-ipc1-202004783.herokuapp.com/doctores/${nombre}`, {
                     method: 'DELETE',
                     headers: {
                         'Content-Type': 'application/json',
@@ -425,7 +417,7 @@
                 // Esta cadena nos servira para escribir los datos en la tabla.
                 var cadena = ''
 
-                fetch('http://localhost:3000/enfermeras', {
+                fetch('https://proyecto2-ipc1-202004783.herokuapp.com/enfermeras', {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',
@@ -509,7 +501,7 @@
                         console.log("imprimiendo el objeto ya guardado")
                         console.log(objEnfermero)
                         if (objEnfermero.nombre != null) {
-                            fetch('http://localhost:3000/mostrarEnfermeras', {
+                            fetch('https://proyecto2-ipc1-202004783.herokuapp.com/mostrarEnfermeras', {
                                 method: 'POST',
                                 body: JSON.stringify(objEnfermero),
                                 headers: {
@@ -518,13 +510,7 @@
                                 }
                             })
 
-                                /* SIMULANDO UN TRY - CATCH
-                                    El metodo fetch trabaja como una Promesa en JavaScript, representa el estado final del metodo
-                                    como si de un return se tratase.
-                                    .then: Para indicar que es lo que hara la respuesta del metodo, el primer then sirve para transformar la respuesta 
-                                    a un JSON entendible para JavaScript.
-                                    .catch: Para indicar que es lo que se hara si se obtuvo un fracaso.
-                                */
+                               
                                 .then(res => res.json())
 
                                 .catch(err => {
@@ -544,7 +530,7 @@
 
                                     //  llamar un metodo definido
                                     //ObtenerDatos()
-                                })//fetch
+                                })
                         }
 
 
@@ -560,7 +546,7 @@
                 console.log(button)
                 var nombre = button.value
 
-                fetch(`http://localhost:3000/enfermeras/${nombre}`, {
+                fetch(`https://proyecto2-ipc1-202004783.herokuapp.com/enfermeras/${nombre}`, {
                     method: 'DELETE',
                     headers: {
                         'Content-Type': 'application/json',
@@ -618,7 +604,7 @@
                 // Esta cadena nos servira para escribir los datos en la tabla.
                 var cadena = ''
 
-                fetch('http://localhost:3000/datosp', {
+                fetch('https://proyecto2-ipc1-202004783.herokuapp.com/datosp', {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',
@@ -702,7 +688,7 @@
                         console.log("imprimiendo el objeto ya guardado")
                         console.log(objEnfermero)
                         if (objEnfermero.nombre != null) {
-                            fetch('http://localhost:3000/Personas', {
+                            fetch('https://proyecto2-ipc1-202004783.herokuapp.com/Personas', {
                                 method: 'POST',
                                 body: JSON.stringify(objEnfermero),
                                 headers: {
@@ -711,13 +697,7 @@
                                 }
                             })
 
-                                /* SIMULANDO UN TRY - CATCH
-                                    El metodo fetch trabaja como una Promesa en JavaScript, representa el estado final del metodo
-                                    como si de un return se tratase.
-                                    .then: Para indicar que es lo que hara la respuesta del metodo, el primer then sirve para transformar la respuesta 
-                                    a un JSON entendible para JavaScript.
-                                    .catch: Para indicar que es lo que se hara si se obtuvo un fracaso.
-                                */
+                              
                                 .then(res => res.json())
 
                                 .catch(err => {
@@ -754,7 +734,7 @@
                 console.log(button)
                 var nombre = button.value
 
-                fetch(`http://localhost:3000/Personas/${nombre}`, {
+                fetch(`https://proyecto2-ipc1-202004783.herokuapp.com/Personas/${nombre}`, {
                     method: 'DELETE',
                     headers: {
                         'Content-Type': 'application/json',
@@ -811,7 +791,7 @@
                 // Esta cadena nos servira para escribir los datos en la tabla.
                 var cadena = ''
 
-                fetch('http://localhost:3000/medicamentos', {
+                fetch('https://proyecto2-ipc1-202004783.herokuapp.com/medicamentos', {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',
@@ -893,7 +873,7 @@ function GuardarUsuariosM(resultados) {
         console.log("imprimiendo el objeto ya guardado")
         console.log(objMedicamento)
         if (objMedicamento.id != 0) {
-            fetch('http://localhost:3000/medicamentos', {
+            fetch('https://proyecto2-ipc1-202004783.herokuapp.com/medicamentos', {
                 method: 'POST',
                 body: JSON.stringify(objMedicamento),
                 headers: {
@@ -902,13 +882,6 @@ function GuardarUsuariosM(resultados) {
                 }
             })
 
-                /* SIMULANDO UN TRY - CATCH
-                    El metodo fetch trabaja como una Promesa en JavaScript, representa el estado final del metodo
-                    como si de un return se tratase.
-                    .then: Para indicar que es lo que hara la respuesta del metodo, el primer then sirve para transformar la respuesta 
-                    a un JSON entendible para JavaScript.
-                    .catch: Para indicar que es lo que se hara si se obtuvo un fracaso.
-                */
                 .then(res => res.json())
 
                 .catch(err => {
@@ -927,7 +900,7 @@ function GuardarUsuariosM(resultados) {
 
                     //  llamar un metodo definido
                     //ObtenerDatos()
-                })//fetch
+                })
         }
 
 
@@ -954,7 +927,7 @@ function GuardarUsuariosM(resultados) {
                 console.log(button)
                 var nombre = button.value
 
-                fetch(`http://localhost:3000/medicamentos/${nombre}`, {
+                fetch(`https://proyecto2-ipc1-202004783.herokuapp.com/medicamentos/${nombre}`, {
                     method: 'DELETE',
                     headers: {
                         'Content-Type': 'application/json',

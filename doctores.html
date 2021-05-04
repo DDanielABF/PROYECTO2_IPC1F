@@ -63,7 +63,7 @@ function EliminarP(button) {
                 console.log(button)
                 var nombre = button.value
 
-                fetch(`http://localhost:3000/citas/${nombre}`, {
+                fetch(`https://proyecto2-ipc1-202004783.herokuapp.com/citas/${nombre}`, {
                     method: 'DELETE',
                     headers: {
                         'Content-Type': 'application/json',
@@ -94,7 +94,7 @@ function EliminarP(button) {
             // Esta cadena nos servira para escribir los datos en la tabla.
             var cadena = ''
 
-            fetch('http://localhost:3000/citas', {
+            fetch('https://proyecto2-ipc1-202004783.herokuapp.com/citas', {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -185,7 +185,7 @@ function EliminarP(button) {
           
 
             // La estructura del fetch no cambia, solo la URL donde consume la API y el method.
-            fetch(`http://localhost:3000/citasD/${id}/${doctor}`, {
+            fetch(`https://proyecto2-ipc1-202004783.herokuapp.com/citasD/${id}/${doctor}`, {
                 method: 'PUT',
                // body: JSON.stringify(objeto),
                 headers: {

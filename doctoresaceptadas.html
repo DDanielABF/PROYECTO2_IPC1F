@@ -67,7 +67,7 @@
             // Esta cadena nos servira para escribir los datos en la tabla.
             var cadena = ''
 
-            fetch(`http://localhost:3000/citasAceptadas/${usuario}`, {
+            fetch(`https://proyecto2-ipc1-202004783.herokuapp.com/citasAceptadas/${usuario}`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -132,14 +132,9 @@
             // En mi caso, yo use el value, lo asignamos a una variable.
             var id = boton.value
 
-            /* sessionStorage, javascript cuenta con un almacenamiento para la pagina, este almacenamiento
-                estara vigente hasta que se cierre la pagina, es ideal para almacenar datos entre paginas.
-                Usamos el storage.setItem("llave", valor) donde llave es el atributo donde se guardara el valor del sessionStorage
-            */
             sessionStorage.setItem("buscarid", id)
 
-            // CAMBIAR DE PAGINA, SIN USAR OTRA PAGINA
-            // Usamos el location.href = "Pagina.html" para cambiar la pagina actual.
+            
             location.href = "PerfilC.html"
         }
 
@@ -151,7 +146,7 @@
         function Modificar(boton) {
             
 
-            // Recopilamos la informacion de los objetos de HTML
+            
             var doctor = sessionStorage.usuariod
             console.log(doctor)
             var id = boton.value
@@ -159,8 +154,8 @@
 
           
 
-            // La estructura del fetch no cambia, solo la URL donde consume la API y el method.
-            fetch(`http://localhost:3000/citasDA/${id}/${doctor}`, {
+         
+            fetch(`https://proyecto2-ipc1-202004783.herokuapp.com/citasDA/${id}/${doctor}`, {
                 method: 'PUT',
                // body: JSON.stringify(objeto),
                 headers: {

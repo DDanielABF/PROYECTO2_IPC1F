@@ -116,7 +116,7 @@
       // Esta cadena nos servira para escribir los datos en la tabla.
       var cadena = ''
       var usuario = sessionStorage.nombre
-      fetch(`http://localhost:3000/citasPaciente/${usuario}`, {
+      fetch(`https://proyecto2-ipc1-202004783.herokuapp.com/citasPaciente/${usuario}`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',

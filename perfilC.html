@@ -108,7 +108,7 @@
             console.log(objeto)
 
             // La estructura del fetch no cambia, solo la URL donde consume la API y el method.
-            fetch(`http://localhost:3000/citas/${id}`, {
+            fetch(`https://proyecto2-ipc1-202004783.herokuapp.com/citas/${id}`, {
                 method: 'PUT',
                 body: JSON.stringify(objeto),
                 headers: {
@@ -132,7 +132,7 @@
         function Eliminar() {
             var nombre = document.querySelector('#nombre').value
 
-            fetch(`http://localhost:3000/Personas/${nombre}`, {
+            fetch(`https://proyecto2-ipc1-202004783.herokuapp.com/Personas/${nombre}`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',
@@ -154,7 +154,7 @@
         // METODO OBTENER UN DATO
         function ObtenerDatosP() {
             var id = sessionStorage.buscarid
-            fetch(`http://localhost:3000/citas/${id}`, {
+            fetch(`https://proyecto2-ipc1-202004783.herokuapp.com/citas/${id}`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -194,7 +194,7 @@
                 // Esta cadena nos servira para escribir los datos en la tabla.
                 var cadena = ''
 
-                fetch('http://localhost:3000/doctores', {
+                fetch('https://proyecto2-ipc1-202004783.herokuapp.com/doctores', {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',

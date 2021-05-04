@@ -124,7 +124,7 @@
             console.log(objeto)
 
             // La estructura del fetch no cambia, solo la URL donde consume la API y el method.
-            fetch(`http://localhost:3000/citas/${id}`, {
+            fetch(`https://proyecto2-ipc1-202004783.herokuapp.com/citas/${id}`, {
                 method: 'PUT',
                 body: JSON.stringify(objeto),
                 headers: {
